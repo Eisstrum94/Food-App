@@ -1,2 +1,2 @@
-# Food-App
+# food-app
 First App for finding restaurants 
