@@ -1,23 +1,36 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@mui/material';
+import { Typography, Grid, Button, Card, CardContent, Paper } from '@mui/material';
 import {Link} from 'react-router-dom'
 
 
 
 const TestGrid = () => {
-
+const people = ["kenny","teddy","billy","me","myself","I"]
     return (
         <>
+        <Paper>
+        
         <Grid container spacing={2}>
 
-            <Grid item xs={6} md={2}>Hi </Grid>
-            <Grid item xs={6} md={2}>Hello </Grid>
-            <Grid item xs={6} md={2}>kwnny </Grid>
-            <Grid item xs={6} md={2}>bill </Grid>
-            <Grid item xs={6} md={2}>alex </Grid>
-            <Grid item xs={6} md={2}>ted </Grid>
+            {
+                people.map(
+                    (value) => {
+                        return (
+                            <Grid  item xs={6} md={2}>
+                            <Card>
+                                <CardContent> 
+                                      {value}
+                                </CardContent>
+                            </Card>
+                        
+                            </Grid>
+                        )
+                    }
+                )
+            }
             
         </Grid> 
+        </Paper>
         <Typography> im The TestGrid </Typography>
         <Button component={Link} to="/search" variant='outlined'>Search</Button>
         </>

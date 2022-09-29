@@ -1,23 +1,23 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@mui/material';
+import { Typography, Grid, Button, Card, CardContent, Paper } from '@mui/material';
 import {Link} from 'react-router-dom'
+import { getValue } from '@mui/system';
+import SearchResults from '../components/searchResults';
 
+const Search = ({searchResults}) => {
+    const people = ["kenny","teddy","billy","me","myself","I"]
 
+    const cheapFood = searchResults.filter((value) => value.price === "$")
+    const moderateFood = searchResults.filter((value) => value.price === "$$")
+    const expansiveFood = searchResults.filter((value) => value.price === "$$$")
 
-const Search = () => {
 
     return (
         <>
-        <Grid container spacing={2}>
-            
-            <Grid item xs={6} md={2}>Hi i am the search page.</Grid>
-            <Grid item xs={6} md={2}>Hello </Grid>
-            <Grid item xs={6} md={2}>kwnny </Grid>
-            <Grid item xs={6} md={2}>bill </Grid>
-            <Grid item xs={6} md={2}>alex </Grid>
-            <Grid item xs={6} md={2}>ted </Grid>
-            
-        </Grid> 
+        <SearchResults food={cheapFood} title ={"cheapFood"}/>
+        <SearchResults food={moderateFood} title ={"Moderate Food"}/>
+        <SearchResults food={expansiveFood} title ={"Expansive Food"}/>
+
         <Typography> im The Search </Typography>
         <Button component={Link} to="/testgrid" variant='outlined'>test grid</Button>
         </>
