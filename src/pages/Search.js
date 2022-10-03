@@ -14,12 +14,12 @@ const Search = ({searchResults}) => {
 
     return (
         <>
-        <SearchResults food={cheapFood} title ={"cheapFood"}/>
+        <SearchResults food={cheapFood} title ={"cheap Food"}/>
         <SearchResults food={moderateFood} title ={"Moderate Food"}/>
         <SearchResults food={expansiveFood} title ={"Expansive Food"}/>
 
-        <Typography> im The Search </Typography>
-        <Button component={Link} to="/testgrid" variant='outlined'>test grid</Button>
+        {/* <Typography> im The Search </Typography>
+        <Button component={Link} to="/testgrid" variant='outlined'>test grid</Button> */}
         </>
     )
 }

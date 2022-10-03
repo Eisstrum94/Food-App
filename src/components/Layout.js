@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Typography, Box, AppBar, Toolbar, IconButton, Button, TextField, InputAdornment, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import TestGrid from '../pages/TestGrid';
@@ -22,7 +22,10 @@ const Layout = () => {
         setSearchText(e.target.value)
         searchApi(e.target.value)
     }
-
+      useEffect (() => {
+          searchApi("Pizza")
+      } , [ ])
+      
     return (
         <>
         <Paper sx={{backgroundColor : "#eeeeee", pb: 2}}>
