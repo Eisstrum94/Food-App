@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export default async (location, term) => {
+const Axios = async (location, term) => {
     
    const response = await axios({
         method : 'get',
@@ -9,3 +9,4 @@ export default async (location, term) => {
     )
 return response
     }
+    export default Axios
