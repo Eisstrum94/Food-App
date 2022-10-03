@@ -48,7 +48,7 @@ const SearchResults = ({food,title}) => {
                     <CardActions>
                         
                         <Button size="small">Share</Button>
-                        <a href={""+value.url } target="_blank" rel="noopener noreferrer">
+                        <a href={""+value.url} target="_blank" rel="noopener noreferrer">
                         <Button size="small">
                                     Vist Website
                                     
