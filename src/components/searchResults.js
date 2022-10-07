@@ -31,7 +31,7 @@ const SearchResults = ({food,title}) => {
                         component="img"
                         height="140"
                         image={value.image_url}
-                        alt="green iguana"
+                        alt="This picture has gone to lunch."
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">

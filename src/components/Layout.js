@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Typography, Box, AppBar, Toolbar, IconButton, Button, TextField, InputAdornment, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import TestGrid from '../pages/TestGrid';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Search from '../pages/Search';
 import SearchIcon from '@mui/icons-material/Search';
@@ -75,7 +74,6 @@ const Layout = () => {
         
         <Routes>
             <Route exact path='/' element={<Search searchResults={results}/>}/>
-            <Route exact path='/testgrid' element={<TestGrid/>}/>
             <Route exact path='/search' element={<Search searchResults={results}/>}/>
             
         </Routes>
