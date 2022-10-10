@@ -5,11 +5,12 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Search from '../pages/Search';
 import SearchIcon from '@mui/icons-material/Search';
 import Yelp from '../api/Yelp';
-
+import Details from '../pages/Details';
 
 const Layout = () => {
     const[searchText,setSearchText] = useState("Empty")
     const [results, setResults] = useState([])
+    const [restId, setRestId] = useState("Nothing")
     // let mySearchTest = "Empaty."
 
     const searchApi = async (term) => {
@@ -75,6 +76,7 @@ const Layout = () => {
         <Routes>
             <Route exact path='/' element={<Search searchResults={results}/>}/>
             <Route exact path='/search' element={<Search searchResults={results}/>}/>
+            <Route exact path='/Details' element={<Details restId = {restId}/>}/>
             
         </Routes>
         </BrowserRouter>

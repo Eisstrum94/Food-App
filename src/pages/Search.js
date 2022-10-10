@@ -4,7 +4,7 @@ import React from 'react';
 // import { getValue } from '@mui/system';
 import SearchResults from '../components/searchResults';
 
-const Search = ({searchResults}) => {
+const Search = ({searchResults, setRestId}) => {
 
     const cheapFood = searchResults.filter((value) => value.price === "$")
     const moderateFood = searchResults.filter((value) => value.price === "$$")
@@ -13,9 +13,9 @@ const Search = ({searchResults}) => {
 
     return (
         <>
-        <SearchResults food={cheapFood} title ={"cheap Food"}/>
-        <SearchResults food={moderateFood} title ={"Moderate Food"}/>
-        <SearchResults food={expansiveFood} title ={"Expansive Food"}/>
+        <SearchResults food={cheapFood} title ={"cheap Food"} setSearchId={setRestId}/>
+        <SearchResults food={moderateFood} title ={"Moderate Food"}setSearchId={setRestId}/>
+        <SearchResults food={expansiveFood} title ={"Expansive Food"}setSearchId={setRestId}/>
 
         {/* <Typography> im The Search </Typography>
         <Button component={Link} to="/testgrid" variant='outlined'>test grid</Button> */}
