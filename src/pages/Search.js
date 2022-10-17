@@ -13,9 +13,9 @@ const Search = ({searchResults, setRestId}) => {
 
     return (
         <>
-        <SearchResults food={cheapFood} title ={"cheap Food"} setSearchId={setRestId}/>
-        <SearchResults food={moderateFood} title ={"Moderate Food"}setSearchId={setRestId}/>
-        <SearchResults food={expansiveFood} title ={"Expansive Food"}setSearchId={setRestId}/>
+        <SearchResults food={cheapFood} title ={"cheap Food"} setRestId={setRestId}/>
+        <SearchResults food={moderateFood} title ={"Moderate Food"}setRestId={setRestId}/>
+        <SearchResults food={expansiveFood} title ={"Expansive Food"}setRestId={setRestId}/>
 
         {/* <Typography> im The Search </Typography>
         <Button component={Link} to="/testgrid" variant='outlined'>test grid</Button> */}
